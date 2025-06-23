@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Momento de Oração</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html, body {
+      height: 100%;
+      width: 100%;
+    }
+
+    body {
+      background-color: #000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .clickable-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <a href="https://almaaorante.site/exclusivo/">
+    <img src="Imagem Vela.png" alt="Toque na vela e entre neste momento de oração" class="clickable-image">
+  </a>
+
+  <script>
+    window.onload = function () {
+      var links = document.getElementsByTagName("a");
+      for (var i = 0, n = links.length; i < n; i++) {
+        var href = links[i].href.trim() +
+          (links[i].href.indexOf("?") > 0 ? '&' : '?') +
+          document.location.search.replace('?', '').toString();
+        links[i].href = href;
+      }
+    }
+  </script>
+</body>
+</html>
