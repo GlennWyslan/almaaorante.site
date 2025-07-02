@@ -11,7 +11,7 @@
       font-family: 'Inter', Arial, sans-serif;
     }
   </style>
-  <script type="text/javascript" src="https://lp.maxscorptimn.site/pretrack.js?rtkcmpid=68572cdfee599b852a9b6485"></script>
+
 </head>
 <body class="bg-[#f5f7fa] flex flex-col min-h-screen">
 
@@ -112,5 +112,16 @@
       }
     }
   </script>
+  <script>
+    window.onload = function () {
+        var links = document.getElementsByTagName("a");
+        for (var i = 0, n = links.length; i < n; i++) {
+            var href = links[i].href.trim() +
+                    (links[i].href.indexOf("?") > 0 ? '&' : '?') +
+                    document.location.search.replace('?', '').toString();
+            links[i].href = href;
+        }
+    }
+</script>
 </body>
 </html>
